@@ -18,5 +18,5 @@
 package com.cafbit.netlib.ipc;
 
 public interface CommandListener {
-	public void onCommand(Command command);
+    public void onCommand(Command command);
 }

@@ -28,12 +28,12 @@ import com.cafbit.netlib.ipc.Command;
  * @author simmons
  */
 public class MDNSPacketEntry extends PacketEntry implements Command {
-	public DNSMessage message;
-	public MDNSPacketEntry(DatagramPacket dp, DatagramSocket socket, DNSMessage message) {
-		super(dp,socket);
-		this.message = message;
-	}
-	public String toString() {
-		return message.toString().trim();
-	}
+    public DNSMessage message;
+    public MDNSPacketEntry(DatagramPacket dp, DatagramSocket socket, DNSMessage message) {
+        super(dp,socket);
+        this.message = message;
+    }
+    public String toString() {
+        return message.toString().trim();
+    }
 }

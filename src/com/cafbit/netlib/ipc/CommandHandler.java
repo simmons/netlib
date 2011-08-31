@@ -21,35 +21,35 @@ import android.os.Handler;
 import android.os.Message;
 
 public class CommandHandler extends Handler {
-	
-	public static final int IPCHANDLER_COMMAND = 1;
-	
-	protected CommandListener commandListener;
-	
-	public CommandHandler(CommandListener commandListener) {
-		this.commandListener = commandListener;
-	}
-	
-	@Override
-	public void handleMessage(Message msg) {
-		super.handleMessage(msg);
-		if (msg.what == IPCHANDLER_COMMAND) {
-			Command command = (Command)msg.obj;
-			commandListener.onCommand(command);
-		}
-	}
-	
-	public void sendCommand(Command command) {
-		sendMessage(Message.obtain(this, IPCHANDLER_COMMAND, command));
-	}
-	
-	// helper methods
+    
+    public static final int IPCHANDLER_COMMAND = 1;
+    
+    protected CommandListener commandListener;
+    
+    public CommandHandler(CommandListener commandListener) {
+        this.commandListener = commandListener;
+    }
+    
+    @Override
+    public void handleMessage(Message msg) {
+        super.handleMessage(msg);
+        if (msg.what == IPCHANDLER_COMMAND) {
+            Command command = (Command)msg.obj;
+            commandListener.onCommand(command);
+        }
+    }
+    
+    public void sendCommand(Command command) {
+        sendMessage(Message.obtain(this, IPCHANDLER_COMMAND, command));
+    }
+    
+    // helper methods
 
-	public void error(Throwable throwable) {
-		sendMessage(Message.obtain(this, IPCHANDLER_COMMAND, new ErrorCommand(throwable)));
-	}
-	public void error(String message, Throwable throwable) {
-		sendMessage(Message.obtain(this, IPCHANDLER_COMMAND, new ErrorCommand(message, throwable)));
-	}
+    public void error(Throwable throwable) {
+        sendMessage(Message.obtain(this, IPCHANDLER_COMMAND, new ErrorCommand(throwable)));
+    }
+    public void error(String message, Throwable throwable) {
+        sendMessage(Message.obtain(this, IPCHANDLER_COMMAND, new ErrorCommand(message, throwable)));
+    }
 
 }

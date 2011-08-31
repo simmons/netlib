@@ -23,7 +23,7 @@ import com.cafbit.netlib.ipc.CommandListener;
 import com.cafbit.netlib.ipc.CommandHandler;
 
 public interface NetworkManagerThread {
-	public CommandHandler getHandler();
-	public CommandListener getCommandListener();
-	public NetworkInterface getNetworkInterface();
+    public CommandHandler getHandler();
+    public CommandListener getCommandListener();
+    public NetworkInterface getNetworkInterface();
 }

@@ -24,12 +24,12 @@ import com.cafbit.netlib.ipc.Command;
  * @author simmons
  */
 public class StubPacketEntry extends PacketEntry implements Command {
-	public String description;
+    public String description;
 
-	public StubPacketEntry(String description) {
-		this.description = description;
-	}
-	public String toString() {
-		return description;
-	}
+    public StubPacketEntry(String description) {
+        this.description = description;
+    }
+    public String toString() {
+        return description;
+    }
 }

@@ -21,19 +21,19 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 
 public interface ReceiverThread {
-	
-	public void start();
-	
-	/**
-	 * Use this thread's socket to send a packet.
-	 * @param packet
-	 * @throws IOException
-	 */
-	public void send(DatagramPacket packet) throws IOException;
+    
+    public void start();
+    
+    /**
+     * Use this thread's socket to send a packet.
+     * @param packet
+     * @throws IOException
+     */
+    public void send(DatagramPacket packet) throws IOException;
 
-	/**
-	 * Ask the receiver thread to quit.
-	 */
-	public void quit();
-	
+    /**
+     * Ask the receiver thread to quit.
+     */
+    public void quit();
+    
 }

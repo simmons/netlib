@@ -18,24 +18,24 @@
 package com.cafbit.netlib.ipc;
 
 public class ErrorCommand implements Command {
-	
-	private String message;
-	private Throwable throwable;
+    
+    private String message;
+    private Throwable throwable;
 
-	public ErrorCommand(Throwable throwable) {
-		this.throwable = throwable;
-	}
-	
-	public ErrorCommand(String message, Throwable throwable) {
-		this.message = message;
-		this.throwable = throwable;
-	}
+    public ErrorCommand(Throwable throwable) {
+        this.throwable = throwable;
+    }
+    
+    public ErrorCommand(String message, Throwable throwable) {
+        this.message = message;
+        this.throwable = throwable;
+    }
 
-	public String getMessage() {
-		return message;
-	}
+    public String getMessage() {
+        return message;
+    }
 
-	public Throwable getThrowable() {
-		return throwable;
-	}
+    public Throwable getThrowable() {
+        return throwable;
+    }
 }

@@ -21,27 +21,27 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
 public class DatagramCommand implements Command {
-	
-	private Thread thread;
-	private DatagramSocket socket;
-	private DatagramPacket datagramPacket;
+    
+    private Thread thread;
+    private DatagramSocket socket;
+    private DatagramPacket datagramPacket;
 
-	public DatagramCommand(Thread thread, DatagramSocket socket, DatagramPacket datagramPacket) {
-		this.thread = thread;
-		this.socket = socket;
-		this.datagramPacket = datagramPacket;
-	}
-	
-	public Thread getThread() {
-		return thread;
-	}
+    public DatagramCommand(Thread thread, DatagramSocket socket, DatagramPacket datagramPacket) {
+        this.thread = thread;
+        this.socket = socket;
+        this.datagramPacket = datagramPacket;
+    }
+    
+    public Thread getThread() {
+        return thread;
+    }
 
-	public DatagramSocket getSocket() {
-		return socket;
-	}
+    public DatagramSocket getSocket() {
+        return socket;
+    }
 
-	public DatagramPacket getDatagramPacket() {
-		return datagramPacket;
-	}
+    public DatagramPacket getDatagramPacket() {
+        return datagramPacket;
+    }
 
 }

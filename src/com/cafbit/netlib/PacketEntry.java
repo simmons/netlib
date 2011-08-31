@@ -28,16 +28,16 @@ import com.cafbit.netlib.ipc.Command;
  * @author simmons
  */
 public abstract class PacketEntry implements Command {
-	public InetAddress src;
-	public int srcPort;
-	public InetAddress dst;
-	public int dstPort;
+    public InetAddress src;
+    public int srcPort;
+    public InetAddress dst;
+    public int dstPort;
 
-	public PacketEntry() {}
-	public PacketEntry(DatagramPacket dp, DatagramSocket socket) {
-		src = dp.getAddress();
-		srcPort = dp.getPort();
-		dst = socket.getLocalAddress();
-		dstPort = socket.getLocalPort();
-	}
+    public PacketEntry() {}
+    public PacketEntry(DatagramPacket dp, DatagramSocket socket) {
+        src = dp.getAddress();
+        srcPort = dp.getPort();
+        dst = socket.getLocalAddress();
+        dstPort = socket.getLocalPort();
+    }
 }
